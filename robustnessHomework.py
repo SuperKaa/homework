@@ -7,14 +7,15 @@ def getage():
     correct = False
     while correct != True:
         try:
-            age = int(input(Fore.CYAN + "enter your age 7-13 "))
-            if age < 7 or age > 13:
+            year = int(input(Fore.CYAN + "enter your school year 7-13 "))
+            if year < 7 or year > 13:
                 print(Fore.RED + "not the correct range\n")
                 correct = False
             else:
                 correct = True
         except ValueError:
             print(Fore.RED + "i asked for an integer! \n")
+    age = 11 + (year - 7)
     return age
 
 age1 = getage()
